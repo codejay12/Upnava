@@ -93,9 +93,9 @@ class Agent:
         return {'messages': results}
       
 if __name__=='__main__':
-  user_input = input("enter your query:")
+  user_input = "Find me a flight from Chicago to New York and a hotel in New York"
   agent = Agent()
-  thread_id=123
+  thread_id=143
   messages = [HumanMessage(content=user_input)]
   config = {'configurable': {'thread_id': thread_id}}
 
