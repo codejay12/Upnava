@@ -45,4 +45,4 @@ static/uploads/
 *.log
 *.db
 *.sqlite
-.claude
+.claude/
