@@ -1,0 +1,36 @@
+upnava
+
+*Up (elevation) + Nava (new)*
+
+objective: upload user profile resume which tells you what are the skills lack to compete in the world for top 1% in the market
+
+app flow: user need to upload the resume or else linked in resume → then ocr scans get text → understand where he lacks and checks his github repo project how the format and goals and what lacks in it or website he made → give recommendation that where he lacks in the current trend and what skills required in the job market → gives a realistic plan to complete the given skills
+
+in premium : will give better video lectures & ai documents , projects  to plan 
+
+Tech aspect : an ai agent which converts the text to ocr and understand the person skills and fetch the skills required and then github agent which understand the user repo and help him how he can do better in the coding 
+
+webpages : hero page about the upanava and upload button and run the agents → set of recommendation → generate plan to complete 
+
+<aside>
+💡
+
+**User Uploads Resume & GitHub URL
+|
+[OCR Agent]
+↓
+[Resume Parsing Agent]
+↓
+[Skill Extraction Agent] ─────► [Job Market Analyzer Agent]
+↓                            ↓
+Extracted Skills            Top Skills in Market
+↓                            ↓
+[Gap Detector Agent] ◄─────────┘
+↓
+[GitHub Repo Analyzer Agent]
+↓
+[Portfolio Feedback Generator]
+↓
+📋 Personalized Recommendations + Learning Plan**
+
+</aside>

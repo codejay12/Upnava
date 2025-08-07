@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upnava - Elevate Your Career to Top 1%</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Upnava</h1>
+                
+            </div>
+            <div class="nav-links">
+                <a href="#home" onclick="scrollToSection('home')">Home</a>
+                <a href="#features" onclick="scrollToSection('features')">Features</a>
+                <a href="#analyze" onclick="scrollToSection('analyze')">Analyze</a>
+                <a href="#premium" onclick="scrollToSection('premium')">Premium</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h2 class="hero-title">Elevate Your Career to the Top 1%</h2>
+                <p class="hero-subtitle">
+                    AI-powered career analysis that identifies skill gaps, analyzes your GitHub portfolio, 
+                    and creates a personalized roadmap to compete with the best in the market.
+                </p>
+                <button class="cta-button" onclick="scrollToSection('analyze')">Start Your Analysis</button>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="upanava banner.png" alt="Upnava Banner" class="hero-image" />
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Upnava?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🎯 Skill Gap Analysis</h3>
+                    <p>AI-powered analysis identifies exactly what skills you need to reach the top 1% in your field.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Market Intelligence</h3>
+                    <p>Real-time market data shows trending skills, salary ranges, and industry demand.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 GitHub Portfolio Review</h3>
+                    <p>Deep analysis of your code quality, project structure, and professional presentation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Personalized Roadmap</h3>
+                    <p>Custom learning path with timelines, resources, and priority rankings for maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analyze" class="analyze-section hidden">
+        <div class="container">
+            <h2 class="section-title">Analyze Your Profile</h2>
+            <div class="upload-container">
+                <form id="analyzeForm">
+                    <div class="form-group">
+                        <label for="resumeFile">Upload Resume (PDF/TXT)</label>
+                        <input type="file" id="resumeFile" accept=".pdf,.txt" class="file-input">
+                        <div class="file-info"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="resumeText">Or Paste Resume Text</label>
+                        <textarea id="resumeText" rows="5" placeholder="Paste your resume content here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="githubUrl">GitHub Profile URL (Optional)</label>
+                        <input type="text" id="githubUrl" placeholder="https://github.com/yourusername">
+                    </div>
+                    <button type="submit" class="submit-button">Analyze My Profile</button>
+                </form>
+                <div id="loadingIndicator" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing your profile... This may take a moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="results-section hidden">
+        <div class="container">
+            <h2 class="section-title">Your Analysis Results</h2>
+            <div class="score-card">
+                <h3>Overall Score</h3>
+                <div class="score-display">
+                    <span id="overallScore" class="score-number">0</span>
+                    <span class="score-suffix">/100</span>
+                </div>
+                <p id="marketPosition" class="market-position"></p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Your Skills</h3>
+                    <div id="skillsList" class="skills-list"></div>
+                </div>
+                <div class="result-card">
+                    <h3>Missing Skills for Top 1%</h3>
+                    <div id="missingSkills" class="missing-skills"></div>
+                </div>
+                <div class="result-card">
+                    <h3>Market Insights</h3>
+                    <div id="marketInsights" class="market-insights"></div>
+                </div>
+                <div class="result-card">
+                    <h3>GitHub Analysis</h3>
+                    <div id="githubAnalysis" class="github-analysis"></div>
+                </div>
+            </div>
+            <div class="learning-plan">
+                <h3>Your Personalized Learning Plan</h3>
+                <div id="learningPlan" class="plan-content"></div>
+            </div>
+            <div class="recommendations">
+                <h3>Key Recommendations</h3>
+                <ul id="recommendationsList" class="recommendations-list"></ul>
+            </div>
+            <button class="reset-button" onclick="resetAnalysis()">Analyze Another Profile</button>
+        </div>
+    </section>
+
+    <section id="premium" class="premium-section">
+        <div class="container">
+            <h2 class="section-title">Upgrade to Premium</h2>
+            <div class="premium-card">
+                <h3>🚀 Unlock Advanced Features</h3>
+                <ul class="premium-features">
+                    <li>Detailed competitive analysis with peer comparison</li>
+                    <li>Industry-specific skill recommendations</li>
+                    <li>Real-time job market alerts and opportunities</li>
+                    <li>Advanced GitHub analytics and code quality metrics</li>
+                    <li>Monthly progress tracking and updated roadmaps</li>
+                    <li>Direct access to premium learning resources</li>
+                </ul>
+                <button class="premium-button">Coming Soon - Join Waitlist</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Upnava. Elevate your career to new heights.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+      function showUploadSection() {
+        document.getElementById('analyze').classList.remove('hidden');
+        document.getElementById('analyze').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          // Show the analyze section if it's hidden
+          if (sectionId === 'analyze') {
+            section.classList.remove('hidden');
+          }
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      // Make navigation work with anchor links
+      document.addEventListener('DOMContentLoaded', function() {
+        // Handle hash in URL on page load
+        if (window.location.hash) {
+          const sectionId = window.location.hash.substring(1);
+          setTimeout(() => scrollToSection(sectionId), 100);
+        }
+      });
+    </script>
+</body>
+</html>
