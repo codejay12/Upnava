@@ -1,14 +1,10 @@
 # Upnava - Elevate Your Career to Top 1%
+![Demo](assets/output.gif)
 
 *Up (elevation) + Nava (new)*
 
 Upnava is an AI-powered career analysis platform that helps professionals identify skill gaps and create personalized learning paths to compete with the top 1% in the job market.
 
-## Demo
-
-https://github.com/user-attachments/assets/upanava.mp4
-
-*Watch Upnava in action - from resume upload to personalized career insights*
 
 ## Features
 
